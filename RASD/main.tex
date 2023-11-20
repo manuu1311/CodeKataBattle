@@ -3,6 +3,7 @@
 \usepackage{textcomp}
 \usepackage{booktabs,rotating,tabularx}
 \usepackage{graphicx}
+\usepackage{xcolor}
 \usepackage[english]{babel}
 \usepackage{caption}
 \usepackage{float}
@@ -11,6 +12,10 @@
 \usepackage[position=top]{subfig} % to use subfloats (used for mockups)
 \usepackage{pdfpages}
 \usepackage{listings}
+\usepackage{tabularx}
+\usepackage{float}
+\floatplacement{table}{h}
+
 
 % page layout and margin
 \usepackage[a4paper, margin=2.54cm]{geometry}
@@ -64,16 +69,22 @@
   {\normalsize Emanuele Pocelli (10726303) \\ Fabrizio Sordetti (10730069) \\  Andrea Varesi (10724377)\par} \vspace{4cm}
   \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.3]{poli_logo.png}
+    \includegraphics[scale=0.3]{src/poli_logo.png}
   \end{figure} \vspace{0.5cm}
 \end{titlepage}
 
+
+\begin{large}
+
 \tableofcontents
 
-\include{Introduction.tex}
-\include{Overall_Description.tex}
-%\include{section/formal_analysis.tex}
-%\include{section/effort_spent.tex}
-%\include{section/references.tex}
 
+\include{section/Introduction.tex}
+\include{section/Overall_Description.tex}
+\include{section/Specific_Requirements.tex}
+\include{section/Alloy.tex}
+\include{section/effort_spent.tex}
+\include{section/references.tex}
+
+\end{large}
 \end{document}
