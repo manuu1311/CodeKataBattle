@@ -518,3 +518,60 @@ In case of exception, the system will not respond to the new push since It will 
 { % notes
 
 }
+
+\usecase
+{
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{src/sd_diagrams/pushtourn.png}
+    \end{figure}
+}
+{13.1}
+{New tournament notification} % name
+{User, Push Notification Service} % actor
+{User registered to the platform as student} % entry condition
+{ % event flow
+    \begin{enumerate}
+        \item New tournament is created in the platform
+        \item The system calls the Push Notification Service
+        \item Push Notification Service sends the notification
+    \end{enumerate}
+}
+{User is notified} % exit condition
+{ % exceptions
+    \begin{itemize}
+        \item None
+    \end{itemize}
+}
+{ % notes
+
+}
+
+\usecase
+{
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{src/sd_diagrams/pushbattle.png}
+    \end{figure}
+}
+{13.2}
+{New battle notification} % name
+{User, Push Notification Service} % actor
+{User registered to the platform as student, User subscribed to a tournament} % entry condition
+{ % event flow
+    \begin{enumerate}
+        \item New battle is created in the context of a tournament user is subscribed to
+        \item The system calls the Push Notification Service
+        \item Push Notification Service sends the notification
+    \end{enumerate}
+}
+{User is notified} % exit condition
+{ % exceptions
+    \begin{itemize}
+        \item None
+    \end{itemize}
+}
+{ % notes
+
+}
+
