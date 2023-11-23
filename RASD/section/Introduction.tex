@@ -1,1 +1,152 @@
 \section{Introduction}
+
+\vspace{24pt}
+
+\subsection{Purpose}
+The system has, as main function, to deliver a platform where Students can challenge themselves, alone or in team, writing code to solve exercises assigned by Educators, to improve their software development skills. Students have to follow a test-first approach.
+\\The platform is used by Educators to create, manage and close tournaments, each one is composed by battles, while Students have to solve the exercises published for every battle filling them with their own code. Each exercise includes a brief textual description and a software project with build automation scripts that contains a set of test cases that the program must pass, but without the program implementation.
+\\CKB offres also the possibility for each team to know their rank (calculated automatically by the platform) within the context of each battle, and the general rank of that tournament, in addition to a set of badges the Students can achieve, to increase the level of challenge. 
+
+\vspace{24pt}
+
+\subsubsection{Goals}
+$[G1]$ Educator can manage (create battles and badges, grant permission to other Educators, and close) each tournament he/she creates. 
+\\$[G2]$ Educator can manage (deliver exercise, set options, evaluate teams submissions and check rank) each battle he/she creates.
+\\$[G3]$ Student can subscribe to a tournament.
+\\$[G4]$ Student can manage (subscribe and check rank) their participation to a battle.
+\\$[G5]$ Both educators and students can check rank for each tournament.
+\\$[G6]$ Both educators and students can visualize the profile of a Student.
+\\$[G7]$ Both educators and students can see the list of ongoing tournaments.
+
+
+\newpage
+
+\subsection{Scope}
+In recent years, it has gained more and more ground the possibility to train and improve writing code skills through platforms, such as CodeKataBattle, that assign to people who want to challenge themselves exercises to fulfill autonomously, in a programming language of choice. 
+\\The philosophy behind these platforms is called \textit{codekata}, a method that aims to refine people's software development skills training and solving excercises over and over again, using feedback to get better every time.
+\\CodeKataBattle deals with two main users on its platform:
+\begin{itemize}
+    \item Educators
+    \item Students
+\end{itemize}
+Each Educator can create a tournament, either creating battles by him/herself or granting to other Educators the permission to create battles within the context of a specific tournament.
+\\Once a new tournament is created, all the Students subscribed to CKB are notified and can decide whether to subscribe to that tournament or not. If a Student decides to subscribe to a tournament, he/she will be notified whenever a new battle is created in the context of that tournament. 
+\\An Educator that has the permission to do it can create a new battle, and delivers the exercise associated to it. Moreover, the Educator can set the rules for that specific battle.
+\\If a Student subscribes to a specific battle, he/she is asked to build his/her own team, with reference to the limits imposed by the Educator. When the deadline expires, for each team is created a GitHub repository, and each team is asked to modify settings, so that for every push the team does, CKB is notified.
+\\If the platform is triggered, it pulls the leatest sources of the team from which it has received the notification and automatically evaluates it. Then, it updates the team rank in the context of the battle.
+\\When the submission deadline expires, there is an intermediate phase, called consolidation stage, in which Educators manually evaluate team projects, if it is required by the battle's settings.
+\\After that, the students partecipating to that battle are notified by the platform and they can visualize their final rank, as well as thier tournament rank, which is updated by CKB whenever a battle ends in the context of that specific torunament.  
+\\In every tournament, Students can achieve some Badges, defined by Educators when they create a new tournament.
+\\Every user subscribed to the platform can visualize the list of ongoing tournaments, the corresponding tournament rank and other Student's profile, including the badges achieved.
+
+\vspace{24pt}
+
+\subsubsection{World Phenomena}
+$[WP1]$ Students work on the assigned exercise.
+\\$[WP2]$ Students fork the GitHub repository of the code kata and set up an automated workflow that informs the CKB platform as soon as students push a new commit into the main branch of their repository.
+
+\vspace{12pt}
+
+\subsubsection{Shared Phenomena - controlled by the World}
+$[SP1]$ Educator creates a new tournament.
+\\$[SP2]$ Educator creates a new battle.
+\\$[SP3]$ Educator grants another Educator the permission to create battles within the context of a specific tournament.
+\\$[SP4]$ Educator delivers the exercise for a specific battle.
+\\$[SP5]$ Educator sets the minimum and maximum number of students per group for a specific battle.
+\\$[SP6]$ Educator sets the registration deadline for a specific battle.
+\\$[SP7]$ Educator sets the final submission deadline for a specific battle.
+\\$[SP8]$ Educator eventually sets the possibility of manually evaluating the projects for a specific battle.
+\\$[SP9]$ Student can subscribe to a tournament.
+\\$[SP10]$ Student can subscribe to a battle.
+\\$[SP11]$ Student can form a team for a specific battle.
+\\$[SP12]$ Both students and educators involved in the battle can see the current rank evolving during the battle.
+\\$[SP13]$ Educator manually evaluates the projects for a specific battle (consolidation stage).
+\\$[SP14]$ Both Educators and Students subscribed to CKB can see the list of ongoing tournaments as well as the corresponding tournament rank.
+\\$[SP15]$ Educator can define a Badge for a specific tournament.
+\\$[SP16]$ Both Educators and Students can visualize another Student's profile.
+
+\vspace{12pt}
+ 
+\subsubsection{Shared Phenomena - controlled by the Machine}
+$[SP17]$ CKB sends a notification to all Students subscribed to the platform whenever a new tournament is created. 
+\\$[SP18]$ CKB sends a notification to all Students subscribed to a specific tournament whenever a new battle is created in the context of that specific tournament.
+\\$[SP19]$ At the end of the consolidation stage, all students participating in the battle are notified when the final battle rank becomes available.
+\\$[SP20]$ When an educator closes a tournament, as soon as the final tournament rank becomes available, the CKB platform notifies all students subscribed to that tournament.
+\\$[SP21]$ CKB can assign a Badge to a Student.
+
+\vspace{24pt}
+
+\newpage
+
+\subsection{Definitions, Acronyms, Abbreviations}
+
+\vspace{24pt}
+
+\subsubsection{Definitions}
+\begin{itemize}
+    \item \textbf{Programming language}: set of rules that allows string values to be converted into various ways of generating machine code, or, in the case of visual programming languages, graphical elements.
+    \item \textbf{Automation scripts}: a specific type of automation script used in software development to automate the process of building, compiling, and packaging software applications.
+    \item \textbf{Test-first approach}: is a software development process relying on software requirements being converted to test cases before software is fully developed, and tracking all software development by repeatedly testing the software against all test cases.
+    \item \textbf{GitHub}: a platform and cloud-based service for software development and version control, allowing developers to store and manage their code.
+    \item \textbf{Badge}: elements in the form of rewards that represent the achievements of individual students.
+\end{itemize}
+
+\vspace{12pt}
+
+\subsubsection{Acronyms}
+\begin{itemize}
+    \item \textbf{CKB}: CodeKataBattle
+    \item \textbf{RASD}: Requirement Analysis and Specification Document
+    \item \textbf{UML}: Unified Modelling Language
+    \item \textbf{UI}: User Interface
+    \item \textbf{OWASP}: Open Web Application Security Project
+    \item \textbf{WCAG}: Web Content Accessibility Guidelines
+\end{itemize}
+
+\vspace{12pt}
+
+\subsubsection{Abbreviations}
+\begin{itemize}
+    \item $[Gn]$ - the n-th goal of the system
+    \item $[WPn]$ - the n-th world phenomena
+    \item $[SPn]$ - the n-th shared phenomena
+    \item $[UCn]$ - the n-th use case
+    \item $[Rn]$ - the n-th functional requirement
+\end{itemize}
+
+\vspace{24pt}
+
+\subsection{Revision history}
+\begin{itemize}
+    \item Version 1.0 (22/12/2023);
+\end{itemize}
+
+\vspace{24pt}
+
+\subsection{Reference Documents}
+
+This document is based on: 
+\begin{itemize}
+    \item The specification of the RASD and DD assignment of the Software Engineering II course, held by professor Matteo Rossi, Elisabetta Di Nitto and Matteo Camilli at the Politecnico di Milano, A.Y 2023/2024
+    \item Slides of Software Engineering 2 course on WeBeep;
+    \item Official link of Codewars (https://www.codewars.com/), a platform similar to CodeKataBattle
+    \item Other informations that helped the development of the project: 
+    \begin{itemize}
+        \item In-depth analysis on \href{http://codekata.com/}{codekata};
+        \item In-depth analysis on \href{https://en.wikipedia.org/wiki/Test-driven\textunderscore development}{test-driven development};
+    \end{itemize}
+\end{itemize}
+
+\vspace{24pt}
+
+\subsection{Document Structure}
+
+This document is divided in 6 chapters, more in detail:
+\begin{enumerate}
+    \item \textbf{Introduction}: this chapter describes the reasons for which this project is being developed, highlighting above all the goals aimed to reach. Moreover, it analyses the environment and the shared phenomena between the world and the machine.
+    \item \textbf{Overall description}: it is an initial analysis about the system to be developed, with examples of possible scenarios. In particular it focuses, through diagrams (e.g. class diagrams, state diagrams), on the elements in the system's domain and the interaction between them. This section also includes domain assumptions and the most relevant requirements of the system.
+    \item \textbf{Specific requirements}: this chapter aims to describe all the system's requirements, both functional and non-functional, and eventual constraints. Diagrams are used to integrate requirements with scenarios and generalize them into use cases. 
+    \item \textbf{Formal analysis using Alloy}: this chapter describes, with Alloy language, the entire model in a formal way. There is also an overview about what can be verified and some examples of the world obtained running the code.
+    \item \textbf{Effort spent}: this section shows the time spent (in hours) by each member to work on this document.
+    \item \textbf{References}: it contains the references to any documents and to the Software used in this document.
+\end{enumerate}
