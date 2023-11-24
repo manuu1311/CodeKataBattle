@@ -1,5 +1,122 @@
 \section{Specific Requirements}
+
+\vspace{12pt}
+
+\subsection{External Interface Requirements}
+
+\vspace{12pt}
+
+\subsubsection{User Interfaces}
+
+In this section is presented CKB platform UI. The general view is the same both for educators and students, but there are some small changes between the two views due to additional functions that can be performed by either one or the other. \\ There are some differences that can be detected. For example, an educator must have the possibility to manually evaluate students' projects, while a student can't, or also an educator has the possibility to create a tournament or a battle within a tournament, while a student can't.
+\\Nevertheless there are also some common functionalities, such as the option to view tournament rank or the list the ongoing tournaments. 
+\\More details in the mockup below.
+
+\vspace{100pt}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{src/educator_view.png}
+    \caption*{Educator Interface}
+\end{figure} \vspace{0.5cm}
+
+\newpage
+
+In the Educator Interface the main page shows the ongoing tournaments, followed by every ongoing battle for that tournament. \\The search bar allows educator to search for a nickname and find users associated to it, so that it's possible to visualize their profile. \\The main functions an educator can perform are shown on the left column: 
+\begin{itemize}
+    \item \textbf{Manage Tournaments}: allows an educator to create and close a tournament, create (with all the possible settings) and close battles and eventually grant the permission to create battles to another educator.
+    \item \textbf{Create Project}: allows an educator to create a new project to assign to students. 
+    \item \textbf{Create Badge}: allows an educator to create a new badge that could be achieved by the students in a tournament.
+    \item \textbf{Evaluations}: allows an educator to manually evaluate students' projects.
+    \item \textbf{View Ranks}: view all ongoing tournaments and battles rank.
+\end{itemize}
+
+\vspace{100pt}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{src/student_view.png}
+    \caption*{Student Interface}
+\end{figure} \vspace{0.5cm}
+
+\newpage
+
+In the Student Interface the main page shows the ongoing tournaments, followed by the battles to which the student is subscribed. \\The search bar allows student to search for a nickname and find users associated to it, so that it's possible to visualize their profile. \\The main functions a student can perform are shown on the left column:
+\begin{itemize}
+    \item \textbf{Notifications}: allows a student to view the notifications the platform sends when a new tournament or a new battle within a tournament the student is subscribed to is created.
+    \item \textbf{Manage Battles}: this section allows a student to create teams and contains the link to the GitHub repository for each battles he/she is subscribed to. 
+    \item \textbf{View Ranks}: view all ongoing tournaments and battles rank.
+\end{itemize}
+
+
+\vspace{60pt}
+
+\subsubsection{Hardware Interfaces}
+
+Both educators and students that want to use the system are required to have a personal computer and an internet connection available, because CKB is provided via a web page.
+
+\vspace{20pt}
+
+\subsubsection{Software Interfaces}
+
+The system requires the following software interfaces in order to provide its services. 
+\begin{itemize}
+    \item \textbf{GitHub API}: the systems has this API to interact with GitHub to detect every push done by each team during a battle. 
+\end{itemize}
+
+\vspace{20pt}
+
+\subsubsection{Communication Interfaces}
+
+The system is based on the communication with users' devices and with GitHub application. For the first one, CKB uses internet connection to send and receive data, while for the second one it uses the GitHub API to communicate with GitHub and pull new code sources pushed by students during a battle. 
+
+
+\newpage
+
 \subsection{Functional Requirements}
+In this section are specified the system's requirements, divided in three target groups to better classify them.
+
+\vspace{20pt}
+
+\begin{itemize}
+    \item \textbf{Basic Requirements}
+    \\
+    \\$[R1]$: The systems allows educators to sign up.
+    \\$[R2]$: the system allows students to sign up.
+    \\$[R3]$: the system allows registered educators to log in.
+    \\$[R4]$: the system allows registered students to log in.
+    \\
+    \item \textbf{Main Requirements} 
+    \\
+    \\$[R5]$: the system allows educators to create a new tournament.
+    \\$[R6]$: the system allows an educator to grant permission to create battles within the context of a specific tournament to another educator.
+    \\$[R7]$: the system allows educators to create a new battle, if they have the permission to do it.
+    \\$[R8]$: the system notifies all the students subscribed to the platform when a new tournament is created.
+    \\$[R9]$: the system allows students to subscribe to a tournament.
+    \\$[R10]$: the system notifies all the students subscribed to a specific tournament when a new battle in the context of that tournament is created.
+    \\$[R11]$: the system allows educators that created a battle to upload the code kata.
+    \\$[R12]$: the system allows educators that created a battle to set minimum and maximum number of students per group.
+    \\$[R13]$: the system allows educators that created a battle to set a registration deadline.
+    \\$[R14]$: the system allows educators that created a battle to set a final submission deadline.
+    \\$[R15]$: the system allows educators that created a battle to set the possibility to manually evaluate projects during the consolidation stage.
+    \\$[R16]$: the system allows students to create teams for ongoing battles inviting other students.
+    \\$[R17]$: the system allows students to join a battle.
+    \\$[R18]$: the system sends to each students that belongs to a team subscribed to a battle the link of the GitHub repository assigned to that team.
+    \\$[R19]$: the system allows both students and educators to see the current rank evolving during a battle.
+    \\$[R20]$: the system allows educators to manually evaluate projects during the consolidation stage in the context of a specific battle.
+    \\$[R21]$: the system notifies all students participating in the battle when the final battle rank becomes available.
+    \\$[R22]$: the system allows both educators and students to see the list of ongoing tournaments.
+    \\$[R23]$: the system allows both educators and students to see the rank of each ongoing tournament.
+    \\$[R24]$: the system allows educators who created a tournament to close it.
+    \\$[R25]$: the system notifies all students involved in a tournament when the final rank of that tournament becomes available.
+    \\
+    \item \textbf{Additional Requirements}
+    \\
+    \\$[R26]$: the system allows educators that have created a tournament to create badges.
+    \\$[R27]$: the system allows both educator and students to visualize the profile and badges of a student.
+\end{itemize}
+
+\vspace{40pt}
 
 
 \subsubsection{Use Cases Diagrams}
@@ -605,3 +722,278 @@ In case of exception, the system will not respond to the new push since It will 
 
 }
 
+
+
+
+\newpage
+
+\subsubsection{Requirements Mapping}
+
+\vspace{1cm}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|p{8cm}|p{8cm}|}
+      \hline
+      \multicolumn{2}{|p{16cm}|}{\textbf{$[G1]$ Educator can manage (create battles and badges, grant permission to other Educators, and close) each tournament he/she creates. }} \\
+      \hline
+      {$[R1]$: The systems allows educators to sign up.
+      \newline$[R3]$: the system allows registered educators to log in.
+      \newline$[R5]$: the system allows educators to create a new tournament.
+      \newline$[R6]$: the system allows an educator to grant permission to create battles within the context of a specific tournament to another educator.
+      \newline$[R7]$: the system allows educators to create a new battle, if they have the permission to do it.
+      \newline$[R24]$: the system allows educators who created a tournament to close it.
+      \newline$[R26]$: the system allows educators that have created a tournament to create badges.}
+      & 
+      {$[D1]$: Users have reliable and consistent access to the internet to participate in code kata battles and interact with the platform.
+      \newline$[D2]$: Users have access to suitable devices, such as computers or mobile devices, with compatible web browsers.
+      \newline$[D3]$: Educators have a basic understanding of the CodeKataBattle platform's features, enabling them to create and manage tournaments and battles effectively. In particular, they have to provide correct tests and rules for projects and badges.
+      \newline$[D5]$: User-provided data, including user profiles, code submissions, and scoring information, is assumed to be accurate and valid. Users are supposed to providing truthful information.
+      \newline$[D7]$: The platform assumes a high level of system uptime, with minimal downtime, to support user interactions, database storage, and real-time features.
+      \newline$[D9]$: Users are responsible for maintaining the security and privacy of their accounts, including choosing strong passwords and keeping their login credentials confidential.}
+      \\
+      \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+\begin{tabular}{|p{8cm}|p{8cm}|}
+  \hline
+  \multicolumn{2}{|p{16cm}|}{\textbf{$[G2]$ Educator can manage (deliver exercise, set options, evaluate teams submissions and check rank) each battle he/she creates.}} \\
+  \hline
+  {
+  $[R1]$: The systems allows educators to sign up.
+  \newline$[R3]$: the system allows registered educators to log in.
+  \newline$[R11]$: the system allows educators that created a battle to upload the code kata.
+  \newline$[R12]$: the system allows educators that created a battle to set minimum and maximum number of students per group.
+  \newline$[R13]$: the system allows educators that created a battle to set a registration deadline.    \newline$[R14]$: the system allows educators that created a battle to set a final submission deadline.
+  \newline$[R15]$: the system allows educators that created a battle to set the possibility to manually evaluate projects during the consolidation stage.
+  \newline$[R19]$: the system allows both students and educators to see the current rank evolving during a battle.
+  \newline$[R20]$: the system allows educators to manually evaluate projects during the consolidation stage in the context of a specific battle.
+  }
+  & 
+  {
+  $[D1]$: Users have reliable and consistent access to the internet to participate in code kata battles and interact with the platform.
+  \newline$[D2]$: Users have access to suitable devices, such as computers or mobile devices, with compatible web browsers.
+  \newline$[D3]$: Educators have a basic understanding of the CodeKataBattle platform's features, enabling them to create and manage tournaments and battles effectively. In particular, they have to provide correct tests and rules for projects and badges. 
+  \newline$[D5]$: User-provided data, including user profiles, code submissions, and scoring information, is assumed to be accurate and valid. Users are supposed to providing truthful information.
+  \newline$[D7]$: The platform assumes a high level of system uptime, with minimal downtime, to support user interactions, database storage, and real-time features.
+  \newline$[D9]$: Users are responsible for maintaining the security and privacy of their accounts, including choosing strong passwords and keeping their login credentials confidential.
+  }
+  \\
+  \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+\begin{tabular}{|p{8cm}|p{8cm}|}
+  \hline
+  \multicolumn{2}{|p{16cm}|}{\textbf{$[G3]$ Student can subscribe to a tournament.}} \\
+  \hline
+  {
+  $[R2]$: the system allows students to sign up.
+  \newline$[R4]$: the system allows registered students to log in.
+  \newline$[R8]$: the system notifies all the students subscribed to the platform when a new tournament is created.
+  \newline$[R9]$: the system allows students to subscribe to a tournament.
+  }
+  & 
+  {
+  $[D1]$: Users have reliable and consistent access to the internet to participate in code kata battles and interact with the platform.
+  \newline$[D2]$: Users have access to suitable devices, such as computers or mobile devices, with compatible web browsers.
+  \newline$[D5]$: User-provided data, including user profiles, code submissions, and scoring information, is assumed to be accurate and valid. Users are supposed to providing truthful information.
+  \newline$[D7]$: The platform assumes a high level of system uptime, with minimal downtime, to support user interactions, database storage, and real-time features.
+  \newline$[D9]$: Users are responsible for maintaining the security and privacy of their accounts, including choosing strong passwords and keeping their login credentials confidential.
+  }
+  \\
+  \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+\begin{tabular}{|p{8cm}|p{8cm}|}
+  \hline
+  \multicolumn{2}{|p{16cm}|}{\textbf{$[G4]$ Student can manage (subscribe and check rank) their participation to a battle.}} \\
+  \hline
+  {
+  $[R2]$: the system allows students to sign up.
+  \newline$[R4]$: the system allows registered students to log in.
+  \newline$[R10]$: the system notifies all the students subscribed to a specific tournament when a new battle in the context of that tournament is created.
+  \newline$[R16]$: the system allows students to create teams for ongoing battles inviting other students.
+  \newline$[R17]$: the system allows students to join a battle.
+  \newline$[R18]$: the system sends to each students that belongs to a team subscribed to a battle the link of the GitHub repository assigned to that team.
+  \newline$[R19]$: the system allows both students and educators to see the current rank evolving during a battle.
+  \newline$[R21]$: the system notifies all students participating in the battle when the final battle rank becomes available.
+  }
+  & 
+  {
+  $[D1]$: Users have reliable and consistent access to the internet to participate in code kata battles and interact with the platform.
+  \newline$[D2]$: Users have access to suitable devices, such as computers or mobile devices, with compatible web browsers.
+  \newline$[D4]$: Students know how to configure Github Actions for let the system aware of the push on the main branch.
+  \newline$[D5]$: User-provided data, including user profiles, code submissions, and scoring information, is assumed to be accurate and valid. Users are supposed to providing truthful information.
+  \newline$[D6]$: Users will use the platform responsibly, adhering to ethical guidelines and academic integrity. Students are expected to complete code katas independently or within the rules of team collaboration defined by educators.
+  \newline$[D7]$: The platform assumes a high level of system uptime, with minimal downtime, to support user interactions, database storage, and real-time features.
+  \newline$[D8]$: Some platform functionalities may rely on external services, such as email verification, communication tools and Github integrations.
+  \newline$[D9]$: Users are responsible for maintaining the security and privacy of their accounts, including choosing strong passwords and keeping their login credentials confidential.
+  \newline$[D10]$: Users are expected to engage in ethical behavior, respecting intellectual property rights, academic integrity, and community guidelines established by the platform.
+  }
+  \\
+  \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+\begin{tabular}{|p{8cm}|p{8cm}|}
+  \hline
+  \multicolumn{2}{|p{16cm}|}{\textbf{$[G5]$ Both educators and students can check rank for each tournament.}} \\
+  \hline
+  {
+  $[R1]$: The systems allows educators to sign up.
+  \newline$[R2]$: the system allows students to sign up.
+  \newline$[R3]$: the system allows registered educators to log in.
+  \newline$[R4]$: the system allows registered students to log in.
+  \newline$[R23]$: the system allows both educators and students to see the rank of each ongoing tournament.
+  \newline$[R25]$: the system notifies all students involved in a tournament when the final rank of that tournament becomes available.
+  }
+  & 
+  {
+  $[D1]$: Users have reliable and consistent access to the internet to participate in code kata battles and interact with the platform.
+  \newline$[D2]$: Users have access to suitable devices, such as computers or mobile devices, with compatible web browsers.
+  \newline$[D5]$: User-provided data, including user profiles, code submissions, and scoring information, is assumed to be accurate and valid. Users are supposed to providing truthful information.
+  \newline$[D7]$: The platform assumes a high level of system uptime, with minimal downtime, to support user interactions, database storage, and real-time features.
+  \newline$[D9]$: Users are responsible for maintaining the security and privacy of their accounts, including choosing strong passwords and keeping their login credentials confidential.
+  }
+  \\
+  \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+  \centering
+\begin{tabular}{|p{8cm}|p{8cm}|}
+  \hline
+  \multicolumn{2}{|p{16cm}|}{\textbf{$[G6]$ Both educators and students can visualize the profile of a Student.}} \\
+  \hline
+  {
+  $[R1]$: The systems allows educators to sign up.
+  \newline$[R2]$: the system allows students to sign up.
+  \newline$[R3]$: the system allows registered educators to log in.
+  \newline$[R4]$: the system allows registered students to log in.
+  \newline$[R27]$: the system allows both educator and students to visualize the profile and badges of a student.
+  }
+  & 
+  {
+  $[D1]$: Users have reliable and consistent access to the internet to participate in code kata battles and interact with the platform.
+  \newline$[D2]$: Users have access to suitable devices, such as computers or mobile devices, with compatible web browsers.
+  \newline$[D5]$: User-provided data, including user profiles, code submissions, and scoring information, is assumed to be accurate and valid. Users are supposed to providing truthful information.
+  \newline$[D7]$: The platform assumes a high level of system uptime, with minimal downtime, to support user interactions, database storage, and real-time features.
+  \newline$[D9]$: Users are responsible for maintaining the security and privacy of their accounts, including choosing strong passwords and keeping their login credentials confidential.
+  }
+  \\
+  \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\begin{tabular}{|p{8cm}|p{8cm}|}
+  \hline
+  \multicolumn{2}{|p{16cm}|}{\textbf{$[G7]$ Both educators and students can see the list of ongoing tournaments.}} \\
+  \hline
+  {
+  $[R1]$: The systems allows educators to sign up.
+  \newline$[R2]$: the system allows students to sign up.
+  \newline$[R3]$: the system allows registered educators to log in.
+  \newline$[R4]$: the system allows registered students to log in.
+  \newline$[R22]$: the system allows both educators and students to see the list of ongoing tournaments.
+  }
+  & 
+  {
+  $[D1]$: Users have reliable and consistent access to the internet to participate in code kata battles and interact with the platform.
+  \newline$[D2]$: Users have access to suitable devices, such as computers or mobile devices, with compatible web browsers.
+  \newline$[D5]$: User-provided data, including user profiles, code submissions, and scoring information, is assumed to be accurate and valid. Users are supposed to providing truthful information.
+  \newline$[D7]$: The platform assumes a high level of system uptime, with minimal downtime, to support user interactions, database storage, and real-time features.
+  \newline$[D9]$: Users are responsible for maintaining the security and privacy of their accounts, including choosing strong passwords and keeping their login credentials confidential.
+  }
+  \\
+  \hline
+\end{tabular}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+\subsection{Performance Requirements}
+
+To work properly the system must guarantee low response time in some aspects such as the time spent to calculate and update the battle score of each team after a pull of the latest sources by the platform. \\ Another aspect that must be prioritized is the deadline management to avoid some users perform actions out of the maximum time estabilished, such as subscription to a battle or push new code on GitHub. Moreover, the system has to send as soon as possible the notifications that have to be sent to students. \\However there could be problems out of the system that can affect the performances, for example problems with users' devices or their internet connection.
+
+
+\vspace{50pt}
+
+\subsection{Design Constraints}
+
+\vspace{20pt}
+
+\subsubsection{Standards compliance}
+In the development of CKB several standards and compliance considerations are addressed. The wireless network communication adheres to the IEEE 802.11 standard, ensuring a reliable and secure connection for users participating in coding challenges. Additionally, strict adherence to data protection standards is paramount, with the implementation of privacy laws and regulations governing the handling of personal information.
+\\To facilitate collaboration and version control in the development process, the system integrates the Git protocol for communication with GitHub, following established best practices for code repository management.
+\\Given the competitive coding nature of the platform, it is imperative to align with OWASP guidelines for web application security. This encompasses robust measures to prevent common vulnerabilities, secure coding practices, and continuous monitoring to ensure the highest standards of security in the challenges and user interactions.
+\\Furthermore, considering the dynamic nature of the platform and its coding challenges, accessibility standards (such as WCAG) are implemented to guarantee an inclusive experience for users. Additionally, performance standards are upheld to ensure the website's responsiveness and optimal user experience across various devices and network conditions. 
+
+\vspace{20pt}
+
+\subsubsection{Hardware limitations}
+
+There are very few hardware requirements to use the platform. Users shall have an internet connection (Wi-Fi) and a modern device. 
+
+\vspace{20pt}
+
+\subsubsection{Any other constraint}
+
+There are no limitiations about users, everyone can sign in to CKB and try its functionalities. To facilitate interactions with users the application page should be intuitive, simple to interact with and aesthetically pleasing.
+
+
+\newpage
+
+\subsection{Software System Attributes}
+
+\vspace{20pt}
+
+\subsubsection{Reliability}
+
+CKB should exhibit consistent and predictable performance, minimizing the occurrence of failures or disruptions, and ensuring its ability to deliver intended functionality over time.
+According to this, the system is distributed and its data are replicated in order to guarantee continuous interactions with it.  
+
+\vspace{20pt}
+
+\subsubsection{Availabilty}
+
+There is no constraint about the time during the day the system can be accessed, so it has to be online as much time as possible. In particular CKB must guarantee availability of 99.9\% so that users are affected by offline periods as less as possible.
+
+\vspace{20pt}
+
+\subsubsection{Security}
+
+The system holds critical user data, underscoring the paramount importance of security considerations. Safeguarding the central database is imperative, necessitating the implementation of comprehensive measures to thwart both external and internal threats. Encryption must be applied to stored passwords, ensuring they remain secure; furthermore, any password recovery process must avoid transmitting sensitive information in plain text. \\For online communication, CKB should employ robust encryption protocols to mitigate the risks of traffic interception and spoofing, thereby thwarting deceptive attacks and upholding privacy and data integrity.
+
+\vspace{20pt}
+
+\subsubsection{Maintainability}
+
+The system's maintainability is a top priority, necessitating the implementation of effective design patterns and adherence to high standards. It is imperative to ensure thorough documentation, steering clear of hard-coding practices. Additionally, a comprehensive testing routine should be established.
+
+\vspace{20pt}
+
+\subsubsection{Portability}
+
+The application is developed for each operating system among the most popular ones, such as MacOS, Windows or Linux. The only requirement about the OS is that it supports a browser to access the web page of the platform.
