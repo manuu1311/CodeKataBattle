@@ -44,7 +44,7 @@ In the following use cases and sequence diagrams, the system is to be seen as bl
 {
     \begin{figure}[H]
         \centering
-        \includegraphics[width=\textwidth]{src/sd_diagrams/sqlogin.png}
+        \includegraphics[width=\textwidth]{src/sequence_diagrams/sqlogin.png}
     \end{figure}
 }
 {1}
@@ -55,7 +55,7 @@ In the following use cases and sequence diagrams, the system is to be seen as bl
     \begin{enumerate}
         \item User requests the Login Page
         \item The system shows the Login Page to user
-        \item User inserts credentials and send them to the system
+        \item User inserts credentials and sends them to the system
         \item The system processes the information and shows a success message redirecting the user to the homepage
     \end{enumerate}
 }
@@ -73,7 +73,7 @@ In the following use cases and sequence diagrams, the system is to be seen as bl
 {
     \begin{figure}[H]
         \centering
-        \includegraphics[width=\textwidth]{src/sd_diagrams/register.png}
+        \includegraphics[width=\textwidth]{src/sequence_diagrams/register.png}
     \end{figure}
 }
 {2}
@@ -83,7 +83,7 @@ In the following use cases and sequence diagrams, the system is to be seen as bl
 { % event flow
     \begin{enumerate}
         \item The system sends user the registration form
-        \item User enters email,username password and academic status. Then, submits the data after reading and accepting the Privacy Policy and the Terms of Service
+        \item User enters email, username password and academic status. Then, submits the data after reading and accepting the Privacy Policy and the Terms of Service
         \item The system sends an email with a secret verification code to Email provider
         \item Email provider receives the email and notifies user
         \item User submits the verification code in the email
@@ -107,7 +107,7 @@ In the following use cases and sequence diagrams, the system is to be seen as bl
 {
     \begin{figure}[H]
         \centering
-        \includegraphics[width=\textwidth]{src/sd_diagrams/tournaments.png}
+        \includegraphics[width=\textwidth]{src/sequence_diagrams/tournaments.png}
     \end{figure}
 }
 {3}
@@ -135,7 +135,7 @@ The tournament page displays all the information about that tournament, includin
 {
     \begin{figure}[H]
         \centering
-        \includegraphics[width=\textwidth]{src/sd_diagrams/userprofile.png}
+        \includegraphics[width=\textwidth]{src/sequence_diagrams/userprofile.png}
     \end{figure}
 }
 {4}
@@ -161,7 +161,7 @@ The profile page displays all the information about a profile, including badges 
 {
     \begin{figure}[H]
         \centering
-        \includegraphics[width=\textwidth]{src/sd_diagrams/manageaccount.png}
+        \includegraphics[width=\textwidth]{src/sequence_diagrams/manageaccount.png}
     \end{figure}
 }
 {5}
@@ -192,13 +192,13 @@ The profile page displays all the information about a profile, including badges 
 {
     \begin{figure}[H]
         \centering
-        \includegraphics[width=\textwidth]{src/sd_diagrams/jointourn.png}
+        \includegraphics[width=\textwidth]{src/sequence_diagrams/jointourn.png}
     \end{figure}
 }
 {6}
 {Join tournament} % name
 {User} % actor
-{User registered to the platform as student, tournament still in subscription phase} % entry condition
+{User logged in to the platform as student, tournament still in subscription phase} % entry condition
 { % event flow
     \begin{enumerate}
         \item User requests the tournament page
@@ -220,16 +220,16 @@ The profile page displays all the information about a profile, including badges 
 {
     \begin{figure}[H]
         \centering
-        \includegraphics[width=\textwidth]{src/sd_diagrams/createteam.png}
+        \includegraphics[width=\textwidth]{src/sequence_diagrams/createteam.png}
     \end{figure}
 }
 {7.1}
 {Create team} % name
 {User} % actor
-{User registered to the platform as Student, User subscribed to a tournament, the battle is related to that tournament and still in team formation phase, User is not yet part of a team} % entry condition
+{User logged in to the platform as Student, user subscribed to a tournament, the battle is related to that tournament and still in team formation phase, user is not yet part of a team} % entry condition
 { % event flow
     \begin{enumerate}
-        \item User navigate to the battle page
+        \item User navigates to the battle page
         \item The system displays the battle page
         \item User clicks the create team button
     \end{enumerate}
@@ -248,16 +248,16 @@ None
 {
     \begin{figure}[H]
         \centering
-        \includegraphics[width=\textwidth]{src/sd_diagrams/jointeam.png}
+        \includegraphics[width=\textwidth]{src/sequence_diagrams/jointeam.png}
     \end{figure}
 }
 {7.2}
 {Join team} % name
 {User} % actor
-{User registered to the platform as Student, User subscribed to a tournament, the battle is related to that tournament and still in team formation phase, User is not yet part of a team} % entry condition
+{User logged in to the platform as Student, user subscribed to a tournament, the battle is related to that tournament and still in team formation phase, user is not yet part of a team} % entry condition
 { % event flow
     \begin{enumerate}
-        \item User navigate to the battle page
+        \item User navigates to the battle page
         \item The system displays the battle page
         \item User enters the team code
     \end{enumerate}
@@ -278,13 +278,13 @@ None
 {
     \begin{figure}[H]
         \centering
-        \includegraphics[width=\textwidth]{src/sd_diagrams/joinbattlelogin.png}
+        \includegraphics[width=\textwidth]{src/sequence_diagrams/joinbattle.png}
     \end{figure}
 }
 {7.3}
 {Join battle} % name
 {User} % actor
-{User registered to the platform as Student, User subscribed to a tournament, the battle is related to that tournament and still in team formation phase, User is the creator of a team} % entry condition
+{User logged in to the platform as Student, User subscribed to a tournament, the battle is related to that tournament and still in team formation phase, User is the creator of a team} % entry condition
 { % event flow
     \begin{enumerate}
         \item User navigates to the battle page
@@ -310,14 +310,14 @@ None
     {
     \begin{figure}[H]
         \centering
-        \includegraphics[width=\textwidth]{src/sd_diagrams/submitcode.png}
+        \includegraphics[width=\textwidth]{src/sequence_diagrams/submitcode.png}
     \end{figure}
 }
 }
 {8}
 {Submit code} % name
 {User, GitHub} % actor
-{Student joined a battle} % entry condition
+{User logged in to the platform as student, user joined a battle, battle is ongoing} % entry condition
 { % event flow
     \begin{enumerate}
         \item User commits code to main branch on GitHub
@@ -339,18 +339,18 @@ In case of exception, the system will not respond to the new push since It will 
 {
     \begin{figure}[H]
         \centering
-        \includegraphics[width=\textwidth]{src/sd_diagrams/createtourn.png}
+        \includegraphics[width=\textwidth]{src/sequence_diagrams/createtourn.png}
     \end{figure}
 }
 {9}
 {Create tournament} % name
 {User} % actor
-{User registered to the platform as Educator} % entry condition
+{User logged in to the platform as Educator} % entry condition
 { % event flow
     \begin{enumerate}
         \item User clicks the create tournament button
         \item The system shows the create torunament page
-        \item User chooses his desired settings for that tournament, (including name, deadlines, badges, ...), then submits
+        \item User chooses his desired settings for that tournament, (including name, deadlines, badges, educators allowed to create battles, ...), then submits
     \end{enumerate}
 }
 {New tournament is created} % exit condition
@@ -370,13 +370,13 @@ In case of exception, the system will not respond to the new push since It will 
 {
     \begin{figure}[H]
         \centering
-        \includegraphics[width=\textwidth]{src/sd_diagrams/managetournsetts.png}
+        \includegraphics[width=\textwidth]{src/sequence_diagrams/managetournsetts.png}
     \end{figure}
 }
 {10}
 {Edit tournament settings} % name
 {User} % actor
-{User registered to the platform as educator, the tournament is not closed, user is the owner of the tournament} % entry condition
+{User logged in to the platform as educator, the tournament is not closed, user is the owner of the tournament} % entry condition
 { % event flow
     \begin{enumerate}
         \item User navigates to the tournament page
@@ -402,13 +402,13 @@ In case of exception, the system will not respond to the new push since It will 
 {
     \begin{figure}[H]
         \centering
-        \includegraphics[width=\textwidth]{src/sd_diagrams/createbattle.png}
+        \includegraphics[width=\textwidth]{src/sequence_diagrams/createbattle.png}
     \end{figure}
 }
 {11.1}
 {Create battle} % name
 {User} % actor
-{User registered to the platform as educator, tournament is ongoing, user has been granted permission to create battles (or is the tournament creator itself)} % entry condition
+{User logged in to the platform as educator, tournament is ongoing, user has been granted permission to create battles (or is the tournament creator itself)} % entry condition
 { % event flow
     \begin{enumerate}
         \item User navigates to the tournament page
@@ -435,13 +435,13 @@ In case of exception, the system will not respond to the new push since It will 
 {
     \begin{figure}[H]
         \centering
-        \includegraphics[width=\textwidth]{src/sd_diagrams/managebattsetts.png}
+        \includegraphics[width=\textwidth]{src/sequence_diagrams/managebattsetts.png}
     \end{figure}
 }
 {11.2}
 {Edit battle settings} % name
 {User} % actor
-{User registered to the platform as educator, battle is ongoing, user has been granted permission to create battles (or is the tournament creator itself)} % entry condition
+{User logged in to the platform as educator, battle is ongoing, user has been granted permission to create battles (or is the tournament creator itself)} % entry condition
 { % event flow
     \begin{enumerate}
         \item User navigates to the battle page
@@ -466,13 +466,13 @@ In case of exception, the system will not respond to the new push since It will 
 {
     \begin{figure}[H]
         \centering
-        \includegraphics[width=\textwidth]{src/sd_diagrams/revscores.png}
+        \includegraphics[width=\textwidth]{src/sequence_diagrams/revscores.png}
     \end{figure}
 }
 {11.3}
 {Review scores} % name
 {User} % actor
-{User registered to the platform as educator, battle is in consolidation phase, user has been granted permission to create battles (or is the tournament creator itself)} % entry condition
+{User logged in to the platform as educator, battle is in consolidation phase, user has been granted permission to create battles (or is the tournament creator itself)} % entry condition
 { % event flow
     \begin{enumerate}
         \item User navigates to the battle page
@@ -495,13 +495,13 @@ In case of exception, the system will not respond to the new push since It will 
 {
     \begin{figure}[H]
         \centering
-        \includegraphics[width=\textwidth]{src/sd_diagrams/closetourn.png}
+        \includegraphics[width=\textwidth]{src/sequence_diagrams/closetourn.png}
     \end{figure}
 }
 {12}
 {Close tournament} % name
 {User} % actor
-{User registered to the platform as educator, tournament is ongoing, user is tournament creator} % entry condition
+{User logged in to the platform as educator, tournament is ongoing, user is tournament creator} % entry condition
 { % event flow
     \begin{enumerate}
         \item User navigates to the tournament page
@@ -523,18 +523,18 @@ In case of exception, the system will not respond to the new push since It will 
 {
     \begin{figure}[H]
         \centering
-        \includegraphics[width=\textwidth]{src/sd_diagrams/pushtourn.png}
+        \includegraphics[width=\textwidth]{src/sequence_diagrams/pushtourn.png}
     \end{figure}
 }
 {13.1}
 {New tournament notification} % name
-{User, Push Notification Service} % actor
-{User registered to the platform as student} % entry condition
+{User, CKB Notification Service} % actor
+{User logged in to the platform as student} % entry condition
 { % event flow
     \begin{enumerate}
         \item New tournament is created in the platform
-        \item The system calls the Push Notification Service
-        \item Push Notification Service sends the notification
+        \item The system calls the CKB Notification Service
+        \item CKB Notification Service sends the notification
     \end{enumerate}
 }
 {User is notified} % exit condition
@@ -551,21 +551,51 @@ In case of exception, the system will not respond to the new push since It will 
 {
     \begin{figure}[H]
         \centering
-        \includegraphics[width=\textwidth]{src/sd_diagrams/pushbattle.png}
+        \includegraphics[width=\textwidth]{src/sequence_diagrams/notifybattle.png}
     \end{figure}
 }
 {13.2}
 {New battle notification} % name
-{User, Push Notification Service} % actor
-{User registered to the platform as student, User subscribed to a tournament} % entry condition
+{User, CKB Notification Service} % actor
+{User logged in to the platform as student, User subscribed to a tournament} % entry condition
 { % event flow
     \begin{enumerate}
         \item New battle is created in the context of a tournament user is subscribed to
-        \item The system calls the Push Notification Service
-        \item Push Notification Service sends the notification
+        \item The system calls the CKB Notification Service
+        \item CKB Notification Service sends the notification
     \end{enumerate}
 }
 {User is notified} % exit condition
+{ % exceptions
+    \begin{itemize}
+        \item None
+    \end{itemize}
+}
+{ % notes
+
+}
+
+\usecase
+{
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{src/sequence_diagrams/battlebegins.png}
+    \end{figure}
+}
+{13.3}
+{Battle begins notification} % name
+{User, CKB Notification Service, GitHub} % actor
+{User logged in to the platform as student, User to a tournament, user joined a battle} % entry condition
+{ % event flow
+    \begin{enumerate}
+        \item Battle team formation deadline expires, battle begins
+        \item The system creates a new GitHub repository containing the codekata
+        \item GitHub successfully creates the repository 
+        \item The system calls the CKB Notification Service 
+        \item CKB Notification Service sends the notification
+    \end{enumerate}
+}
+{User receives the notification and the link to the github repository} % exit condition
 { % exceptions
     \begin{itemize}
         \item None
