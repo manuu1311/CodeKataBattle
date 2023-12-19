@@ -640,7 +640,7 @@ In case of exception, the system will not respond to the new push since It will 
 {
     \begin{figure}[H]
         \centering
-        \includegraphics[width=\textwidth]{src/sequence_diagrams/pushtourn.png}
+        \includegraphics[width=\textwidth]{src/sequence_diagrams/notifytourn.png}
     \end{figure}
 }
 {13.1}
@@ -702,7 +702,7 @@ In case of exception, the system will not respond to the new push since It will 
 {13.3}
 {Battle begins notification} % name
 {User, CKB Notification Service, GitHub} % actor
-{User logged in to the platform as student, User to a tournament, user joined a battle} % entry condition
+{User logged in to the platform as student, User subscribed to a tournament, user joined a battle} % entry condition
 { % event flow
     \begin{enumerate}
         \item Battle team formation deadline expires, battle begins
@@ -720,6 +720,39 @@ In case of exception, the system will not respond to the new push since It will 
 }
 { % notes
 
+}
+
+\usecase
+{
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{src/sequence_diagrams/badgeassignment.png}
+    \end{figure}
+}
+{14}
+{Badges assignment} % name
+{User, CKB Notification Service} % actor
+{User subscribed to a tournament, tournament has a badge associated} % entry condition
+{ % event flow
+    \begin{enumerate}
+        \item Tournament is closed
+        \item The system checks the badge rules fulfillment for all students subscribed to that tournament
+        \item User is assigned a badge
+        \item The system calls the CKB Notification Service 
+        \item CKB Notification Service sends the notification
+    \end{enumerate}
+}
+{User receives the notification of the badge assigned} % exit condition
+{ % exceptions
+    \begin{itemize}
+        \item User does not fulfill the rules associated to the badge
+    \end{itemize}
+}
+{ % notes
+    \begin{itemize}
+        \item Exception: User is not assigned the badge, thus does not receive the notification
+    \end{itemize}
+    This operation is performed for every badge associated with the tournament that is closed
 }
 
 
