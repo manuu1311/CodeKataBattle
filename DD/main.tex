@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage{booktabs,rotating,tabularx}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{hyperref} % provides \url{}
+\usepackage[shortlabels]{enumitem} % enumeration package
+\usepackage[position=top]{subfig}
+\usepackage{pdfpages}
+\usepackage{listings}
+\usepackage{tabularx}
+\usepackage{float}
+
+% page layout and margin
+\usepackage[a4paper, margin=2.54cm]{geometry}
+
+% list spacing
+\usepackage{enumitem}
+\setlist{topsep=2pt, itemsep=2pt, partopsep=2pt, parsep=2pt}
+\def\arraystretch{1.5}
+% Header & Footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Software Engineering 2 - DD}
+
+\begin{document}
+
+% title section
+\begin{titlepage}
+  \centering
+  {\normalsize
+    Software Engineering 2 - Prof. Camilli Matteo \\
+    Dipartimento di Elettronica, Informazione e Bioingegneria \\
+    Politecnico di Milano \par
+  }     \vspace{3cm}
+  {\Huge \textbf{CKB - CodeKataBattle\\} } \vspace{1cm}
+  {\large \textbf{DD\\Design Document} \par} \vspace{1cm}
+  {\normalsize January 7, 2024 \par} \vspace{4cm}
+  {\normalsize Emanuele Pocelli (10726303) \\ Fabrizio Sordetti (10730069) \\  Andrea Varesi (10724377)\par} \vspace{4cm}
+  \begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.3]{src/poli_logo.png}
+  \end{figure} \vspace{0.5cm}
+\end{titlepage}
+
+\begin{large}
+    
+\tableofcontents
+
+\include{section/introduction.tex}
+\include{section/arch_design.tex}
+\include{section/ui_design.tex}
+\include{section/req_traceability.tex}
+\include{section/impl_integration_testing.tex}
+\include{section/effort_spent.tex}
+\include{section/references.tex}
+
+\end{large}
+
+\end{document}
