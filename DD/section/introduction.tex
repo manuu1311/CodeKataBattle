@@ -1,0 +1,98 @@
+\section{Introduction}
+
+\subsection{Purpose}
+
+The system has, as main function, to deliver a platform where Students can challenge themselves, alone or in team, writing code to solve exercises assigned by Educators, to improve their software development skills. Students have to follow a test-first approach.
+\\The platform is used by Educators to create, manage and close tournaments, each one is composed by battles, while Students have to solve the exercises published for every battle filling them with their own code. Each exercise includes a brief textual description and a software project with build automation scripts that contains a set of test cases that the program must pass, but without the program implementation.
+\\CKB offres also the possibility for each team to know their rank (calculated automatically by the platform) within the context of each battle, and the general rank of that tournament, in addition to a set of badges the Students can achieve, to increase the level of challenge. 
+
+\vspace{24pt}
+
+\subsection{Scope}
+
+The CodeKataBattle system is designed with the primary objective of providing a comprehensive platform for students to hone their programming skills through the collaborative resolution of coding exercises. The system follows the principles of \textit{codekata}, emphasizing the iterative practice of problem-solving for effective learning. \\In addition to catering to students, the system accommodates a second user category: educators. Educators are empowered to oversee various aspects of the tournaments they create, wielding a range of functionalities. This includes the creation of battles, the assignment of problems to students, and the evaluation of the projects submitted by participants. \\Each battle within the system is defined by specific deadlines, imposing a structured timeline on student endeavors. Participants are required to diligently work on their projects, ensuring compliance with the technical specifications set for their respective workspaces. Furthermore, the platform extends its utility by offering features such as the visualization of tournament and battle ranks, as well as the opportunity for students to earn badges upon completion of a tournament. \\For a more detailed exploration of these features, refer to the Requirements Analysis and Specification Document (RASD).
+
+\newpage
+
+\subsection{Definitions, Acronyms, Abbreviations}
+
+\subsubsection{Definitions}
+
+\begin{itemize}
+    \item \textbf{Programming language}: set of rules that allows string values to be converted into various ways of generating machine code, or, in the case of visual programming languages, graphical elements.
+    \item \textbf{Automation scripts}: a specific type of automation script used in software development to automate the process of building, compiling, and packaging software applications.
+    \item \textbf{Test-first approach}: is a software development process relying on software requirements being converted to test cases before software is fully developed, and tracking all software development by repeatedly testing the software against all test cases.
+    \item \textbf{GitHub}: a platform and cloud-based service for software development and version control, allowing developers to store and manage their code.
+    \item \textbf{Badge}: elements in the form of rewards that represent the achievements of individual students.
+    \item \textbf{ACID properties}: (atomicity, consistency, isolation, durability) is a set of properties of database transactions intended to guarantee data validity despite errors, power failures, and other mishaps.
+\end{itemize}
+
+\vspace{12pt}
+
+\subsubsection{Acronyms}
+
+\begin{itemize}
+    \item \textbf{CKB}: CodeKataBattle
+    \item \textbf{RASD}: Requirement Analysis and Specification Document 
+    \item \textbf{DD}: Design Document
+    \item \textbf{UML}: Unified Modelling Language
+    \item \textbf{UI}: User Interface
+    item \textbf{REST}: Representational state transfer
+    \item \textbf{DBMS} - database management system
+    \item \textbf{API} - Application Programming Interface
+    \item \textbf{ER} - entity-relationship
+    \item \textbf{HTTP} - hypertext transfer protocol
+    \item \textbf{SPA} - Single Page Application
+    \item \textbf{JSON} - JavaScript Object Notation
+    \item \textbf{XML} - eXtensible Markup Language
+\end{itemize}
+
+\vspace{12pt}
+
+\subsubsection{Abbreviations}
+
+\begin{itemize}
+    \item $[Rn]$ - the n-th functional requirement
+    \item $[Fn]$ - the n-th feature 
+    \item S2B - software to be
+\end{itemize}
+
+\vspace{24pt}
+
+\subsection{Revision History}
+
+\begin{itemize}
+    \item Version 1.0 (07/01/2024)
+\end{itemize}
+
+\vspace{1cm}
+
+\subsection{Reference Documents}
+
+This document is based on: 
+\begin{itemize}
+    \item The specification of the RASD and DD assignment of the Software Engineering II course, held by professor Matteo Rossi, Elisabetta Di Nitto and Matteo Camilli at the Politecnico di Milano, A.Y 2023/2024
+    \item Slides of Software Engineering 2 course on WeBeep;
+    \item Official link of Codewars (https://www.codewars.com/), a platform similar to CodeKataBattle
+    \item Other information that helped the development of the project: 
+    \begin{itemize}
+        \item In-depth analysis on \href{http://codekata.com/}{codekata};
+        \item In-depth analysis on \href{https://en.wikipedia.org/wiki/Test-driven\textunderscore development}{test-driven development};
+    \end{itemize}
+\end{itemize}
+
+\vspace{24pt}
+
+\subsection{Document Structure}
+
+This document is divided in 6 chapters, more in detail:
+
+\begin{itemize}
+    \item \textbf{Introduction}: this chapter explains what are the purpose and the scope of the project, adding some technical information such as definitions and acronyms of terms used in the document and references.
+    \item \textbf{Architectural Design}: it introduces the main architectural choices made for the system. This section includes an overview of the components and interfaces to communicate, a description of the infrastructure and also diagrams to represent both static and runtime views.  
+    \item \textbf{User Interface Design}: this chapter contains the mock-ups both for educator and student interfaces, including a brief description of the main functionalities provided by the interface. 
+    \item \textbf{Requirement Traceability}: this section shows the links between requirements (previously defined in RASD) and components described in the previous chapters.
+    \item \textbf{Implementation, Integration and Test Plan}: this chapter describes the correct order to deploy the system, starting from the subsystems and components implementation, then integrating and testing.   
+    \item \textbf{Effort spent}: this section shows the time spent (in hours) by each member to work on this document.
+    \item \textbf{References}: it contains the references to any documents and to the Software used in this document.
+\end{itemize}
