@@ -1,0 +1,374 @@
+\section{Requirement Traceability}
+
+This section aims to map each requirement previously defined in the RASD document to the design elements that compose the CKB system and that satisfy it.
+
+\vspace{1cm}
+
+\begin{table}[H]
+  \centering
+  \begin{tabularx}{\textwidth}{|p{3cm}|X|}
+    \hline
+    \textbf{Requirements:} &
+    $[R1]$: The system allows educators to sign up
+    \newline$[R2]$: The system allows students to sign up
+    \\
+    \hline
+    \textbf{Components:} & 
+    \begin{itemize}
+        \item Web App
+        \item Web Server
+        \item Dispatcher 
+        \item CKB Server 
+        \begin{itemize}
+            \item CKB's Account Manager 
+        \end{itemize}
+        \item Query Manager
+        \item DBMS
+        \item Email Provider API
+    \end{itemize}
+    \\
+    \hline
+  \end{tabularx}
+\end{table}
+
+
+\begin{table}[H]
+  \centering
+  \begin{tabularx}{\textwidth}{|p{3cm}|X|}
+    \hline
+    \textbf{Requirements:} &
+    $[R3]$: The system allows registered educators to log in
+    \newline$[R4]$: The system allows registered students to log in
+    \\
+    \hline
+    \textbf{Components:} & 
+    \begin{itemize}
+        \item Web App
+        \item Web Server
+        \item Dispatcher 
+        \item CKB Server 
+        \begin{itemize}
+            \item CKB's Account Manager 
+        \end{itemize}
+        \item Query Manager
+        \item DBMS
+    \end{itemize}
+    \\
+    \hline
+  \end{tabularx}
+\end{table}
+
+
+\begin{table}[H]
+  \centering
+  \begin{tabularx}{\textwidth}{|p{3cm}|X|}
+    \hline
+    \textbf{Requirements:} &
+    $[R5]$: The system allows educators to create a new tournament
+    \newline$[R6]$: The system allows an educator to grant permission to create battles within the context of a specific tournament to another educator
+    \newline$[R24]$ The system allows educators who created a tournament to close it
+    \\
+    \hline
+    \textbf{Components:} & 
+    \begin{itemize}
+        \item Web App
+        \item Web Server 
+        \item Dispatcher
+        \item CKB Server 
+        \begin{itemize}
+            \item CKB's Account Manager
+            \item Tournament Manager 
+        \end{itemize}
+        \item Query Manager
+        \item DBMS
+    \end{itemize}
+    \\
+    \hline
+  \end{tabularx}
+\end{table}
+
+
+\begin{table}[H]
+  \centering
+  \begin{tabularx}{\textwidth}{|p{3cm}|X|}
+    \hline
+    \textbf{Requirements:} &
+    $[R7]$: The system allows educators to create a new battle, if they have the permission to do it
+    \\
+    \hline
+    \textbf{Components:} & 
+    \begin{itemize}
+        \item Web App
+        \item Web Server 
+        \item Dispatcher 
+        \item CKB Server 
+        \begin{itemize}
+            \item CKB's Account Manager
+            \item Tournament Manager
+            \item Battle Manager 
+        \end{itemize}
+        \item Query Manager
+        \item DBMS
+    \end{itemize}
+    \\
+    \hline
+  \end{tabularx}
+\end{table}
+
+
+\begin{table}[H]
+  \centering
+  \begin{tabularx}{\textwidth}{|p{3cm}|X|}
+    \hline
+    \textbf{Requirements:} &
+    $[R8]$: The system notifies all the students subscribed to the platform when a new tournament is created
+    \\
+    \hline
+    \textbf{Components:} & 
+    \begin{itemize}
+        \item Web App
+        \item Web Server
+        \item Dispatcher 
+        \item CKB Server 
+        \begin{itemize}
+            \item Tournament Manager
+            \item CKB Notification Service 
+        \end{itemize}
+        \item Query Manager
+        \item DBMS
+    \end{itemize}
+    \\
+    \hline
+  \end{tabularx}
+\end{table}
+
+
+
+\begin{table}[H]
+  \centering
+  \begin{tabularx}{\textwidth}{|p{3cm}|X|}
+    \hline
+    \textbf{Requirements:} &
+    $[R9]$: The system allows students to subscribe to a tournament
+    \\
+    \hline
+    \textbf{Components:} & 
+    \begin{itemize}
+        \item Web App
+        \item Web Server 
+        \item Dispatcher
+        \item CKB Server 
+        \begin{itemize}
+            \item CKB's Account Manager
+            \item Search Helper
+            \item Tournament Manager 
+        \end{itemize}
+        \item Query Manager
+        \item DBMS
+    \end{itemize}
+    \\
+    \hline
+  \end{tabularx}
+\end{table}
+
+
+\begin{table}[H]
+  \centering
+  \begin{tabularx}{\textwidth}{|p{3cm}|X|}
+    \hline
+    \textbf{Requirements:} &
+    $[R10]$: The system notifies all the students subscribed to a specific tournament when a new battle in the context of that tournament is created 
+    \\
+    \hline
+    \textbf{Components:} & 
+    \begin{itemize}
+        \item Web App
+        \item Web Server 
+        \item Dispatcher
+        \item CKB Server 
+        \begin{itemize}
+            \item Battle Manager 
+            \item CKB Notification Service
+        \end{itemize}
+        \item Query Manager 
+        \item DBMS
+    \end{itemize}
+    \\
+    \hline
+  \end{tabularx}
+\end{table}
+
+
+
+\begin{table}[H]
+  \centering
+  \begin{tabularx}{\textwidth}{|p{3cm}|X|}
+    \hline
+    \textbf{Requirements:} &
+    $[R11]$: The system allows educators that created a battle to upload the code kata
+    \newline$[R12]$ The system allows educators that created a battle to set minimum and maximum number of students per group
+    \newline$[R13]$ The system allows educators that created a battle to set a registration deadline
+    \newline$[R14]$ The system allows educators that created a battle to set a final submission deadline
+    \newline$[R15]$ The system allows educators that created a battle to set the possibility to manually evaluate projects during the consolidation stage
+    \newline$[R16]$ The system allows students to create teams for ongoing battles inviting other students 
+    \newline$[R17]$ The system allows students to join a battle
+    \newline$[R20]$ The system allows educators to manually evaluate projects during the consolidation stage in the context of a specific battle 
+    \\
+    \hline
+    \textbf{Components:} & 
+    \begin{itemize}
+        \item Web App
+        \item Web Server 
+        \item Dispatcher
+        \item CKB Server 
+        \begin{itemize}
+            \item CKB's Account Manager
+            \item Battle Manager 
+        \end{itemize}
+        \item Query Manager 
+        \item DBMS
+    \end{itemize}
+    \\
+    \hline
+  \end{tabularx}
+\end{table}
+
+
+\begin{table}[H]
+  \centering
+  \begin{tabularx}{\textwidth}{|p{3cm}|X|}
+    \hline
+    \textbf{Requirements:} &
+    $[R18]$: The system sends to each student that belongs to a team subscribed to a battle the link of the GitHub repository assigned to that team
+    \\
+    \hline
+    \textbf{Components:} & 
+    \begin{itemize}
+        \item Web App
+        \item Web Server 
+        \item Dispatcher
+        \item CKB Server 
+        \begin{itemize}
+            \item Battle Manager 
+            \item CKB Notification Service
+        \end{itemize}
+        \item GitHub API
+        \item Query Manager 
+        \item DBMS
+    \end{itemize}
+    \\
+    \hline
+  \end{tabularx}
+\end{table}
+
+
+
+\begin{table}[H]
+  \centering
+  \begin{tabularx}{\textwidth}{|p{3cm}|X|}
+    \hline
+    \textbf{Requirements:} &
+    $[R19]$: The system allows both students and educators to see the current rank evolving during a battle 
+    \newline$[R22]$ The system allows both educators and students to see the list of ongoing tournaments
+    \newline$[R23]$ The system allows both educators and students to see the rank of each ongoing tournament
+    \\
+    \hline
+    \textbf{Components:} & 
+    \begin{itemize}
+        \item Web App
+        \item Web Server 
+        \item Dispatcher
+        \item CKB Server 
+        \begin{itemize}
+            \item Tournament Viewer
+        \end{itemize}
+        \item Query Manager 
+        \item DBMS
+    \end{itemize}
+    \\
+    \hline
+  \end{tabularx}
+\end{table}
+
+
+
+\begin{table}[H]
+  \centering
+  \begin{tabularx}{\textwidth}{|p{3cm}|X|}
+    \hline
+    \textbf{Requirements:} &
+    $[R21]$ The system notifies all students participating in the battle when the final battle rank becomes available 
+    \newline$[R25]$ The system notifies all students involved in a tournament when the final rank of that tournament becomes available
+    \\
+    \hline
+    \textbf{Components:} & 
+    \begin{itemize}
+        \item Web App
+        \item Web Server 
+        \item Dispatcher
+        \item CKB Server 
+        \begin{itemize}
+            \item Tournament Viewer
+            \item CKB Notification Service
+        \end{itemize}
+        \item Query Manager 
+        \item DBMS
+    \end{itemize}
+    \\
+    \hline
+  \end{tabularx}
+\end{table}
+
+
+\begin{table}[H]
+  \centering
+  \begin{tabularx}{\textwidth}{|p{3cm}|X|}
+    \hline
+    \textbf{Requirements:} &
+    $[R26]$ The system allows educators that have created a tournament to create badges 
+    \\
+    \hline
+    \textbf{Components:} & 
+    \begin{itemize}
+        \item Web App
+        \item Web Server 
+        \item Dispatcher
+        \item CKB Server 
+        \begin{itemize}
+            \item CKB's Account Manager
+            \item Tournament Manager
+            \item Badge Helper 
+        \end{itemize}
+        \item Query Manager 
+        \item DBMS
+    \end{itemize}
+    \\
+    \hline
+  \end{tabularx}
+\end{table}
+
+
+\begin{table}[H]
+  \centering
+  \begin{tabularx}{\textwidth}{|p{3cm}|X|}
+    \hline
+    \textbf{Requirements:} &
+    $[R27]$ The system allows both educator and students to visualize the profile and badges of a student 
+    \\
+    \hline
+    \textbf{Components:} & 
+    \begin{itemize}
+        \item Web App
+        \item Web Server 
+        \item Dispatcher
+        \item CKB Server 
+        \begin{itemize}
+            \item Profile viewer
+        \end{itemize}
+        \item Query Manager 
+        \item DBMS
+    \end{itemize}
+    \\
+    \hline
+  \end{tabularx}
+\end{table}
