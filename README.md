@@ -20,8 +20,11 @@ Formal analysis, requirements engineering and Design Document for the CodeKataBa
 
 ## SEQUENCE DIAGRAMS
 <img src="RASD/src/sequence_diagrams/register.png" width="400">
+<br>
 <img src="RASD/src/sequence_diagrams/notifybattle.png" width="400">
+<br>
 <img src="RASD/src/sequence_diagrams/battlebegins.png" width="400">
+<br>
 <img src="RASD/src/sequence_diagrams/badgeassignment.png" width="400">
 
 ## USE CASE DIAGRAMS
