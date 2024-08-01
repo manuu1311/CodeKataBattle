@@ -2,10 +2,13 @@
 Formal analysis, requirements engineering and Design Document for the CodeKataBattle application
 <br>
 ## VIEW
+<div>
    <img src="DD/src/student_view.png" width="400">
    <img src="RASD/src/educator_view.png" width="400">
    <img src="DD/src/Deployment View of the system.png" width="400">
    <img src="DD/src/High level system architecture.png" width="400">
+<div>
+
 
 ## ALLOY
 <img src="RASD/src/Alloy-model.png" width="750">
